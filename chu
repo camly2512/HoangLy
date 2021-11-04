@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	char chu;
+	printf("Nhap ki tu can bien doi:"); scanf("%c",&chu);
+	if(chu>=65&&chu<=90) printf("%c",chu+32);
+	else printf("%c",chu-32);
+	return 0;
+	}
+	
+	
