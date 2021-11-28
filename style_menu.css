@@ -1,78 +1,78 @@
-@media screen and (min-width: 1000px){ /*muc toi da*/
-    .nen{
-        max-width:1200px;
-        margin: 0 auto;
-        }
-}
-body{
-    margin: 0;
-    background-image: url(background.jpg);
-        
-}
-.wrapper{
-    width: 100%;
-    max-width: 1180px;
-    padding: 0 10px;
-    margin: 0 auto;
+*{
+    margin:0;
+    padding:0;
+    border: none;
     background-color: black;
-    font-family:sans-serif;
 }
-.logo{
-    float:left;
+.nen {
+    background-color: black;
+    padding: 0 40px;  /* tren duoi 0- trai phai 40*/
+    height: 50px;
+    line-height: 50px;   /*tang khoang cach giua cac dong*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
-ul{
-    float:right;
+ul {
+    float: right;
 }
-li{
-    display: inline;
-    transition: 0.3s;
-    padding:12px 18px;
+li {
+    display: inline;/*hien thi nhu 1 noi tuyen*/
+    transition: 0.3s;/*0.3s chuyen doi*/
+    padding: 15px 15px;
 }
-li a{
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 18px;
+.logo {
+    float: left;
+}
+li a {
+    color: white;
+    text-decoration: none;/*day la dang mac dinh*/
+}
+.menu {
+    float: right;
+    display: none;/*khong hien thi*/
 }
 ul li:hover{
-    background-color:black;
-    transition:0.3s;
-    font-size:20px;
+    background-color:#404040;
+    transition: 0.3s;
+    font-size: 20px;
 }
-ul.hai{
-    display: none;
+ul li a:hover{
+    background-color: #404040;
+}
+ul.hai {
+    width: 200px;
+    height: 153px;
+    background-color: #404040;
     position: absolute;
-    background-color:black;
-    width:100px;
+    display: none;
 }
 ul.hai li {
-    display: block;
-    color:whitesmoke;
+    display: block;/*doc lap*/
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 0;
     text-align: center;
-    cursor:pointer;
-    font-size: 18px;
+    cursor: pointer;/*dinh dang con tro chuot*/
 }
-ul.hai li:hover{
-    background-color:black;
-    font-size:20px;
-    transition:0.3s;
+ul.hai li :hover{
+    background-color:#404040;
+    transition: 0.3s;
+    cursor: pointer;
+}
+ul.hai li a:hover{
+    background-color: #404040;
 }
 li{
     position: relative;
 }
 li:hover ul.hai {
     display: block;
-    z-index:1;
-    opacity:1;
 }
-.menu{
-    float:right;
-    display:none;
-}
-@media (max-width:800px) {
+@media(max-width:1000px){
     ul{
-        display:none;
+        display: none;
     }
-    ul.open{
+    ul.open {
         margin: 0;
         background-color:black;
         width: 100%;
@@ -83,17 +83,18 @@ li:hover ul.hai {
         display: block;
     }
     ul li{
-        display:block;
-        float:none;
-        text-align:center;
-        width:100%;
-        margin:0;
-    }
-    ul.hai{
-        width:100%;
-        height:100%;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid white;/*vien*/
     }
     .menu{
-        display:block;
+        display: block;
+    }
+    ul.hai{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;/*thu tu chong chat*/
+        left: 0px;
     }
 }
